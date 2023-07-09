@@ -1,153 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    padding: 72px 100px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    gap: 50px;
+  }
+
+  .top_line__button {
+    padding: 12px 50px;
+    border-radius: 24px;
+    border: 1px solid #377dff;
+    background-color: white;
+    color: #377dff;
+  }
+
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28px;
+  }
+
+  .info-text {
+    text-align: center;
+    padding: 24px 140px;
+  }
+
+  .info-button {
+    border-radius: 24px;
+    background: #377dff;
+    box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.5);
+    color: white;
+    padding: 12px 50px;
+    border: 1px solid #377dff;
+  }
+
+  .image2 {
+    top: -498px;
+    position: relative;
+    z-index: 1;
+    left: -390px;
+  }
+
+  .main_services {
+    display: flex;
+    margin: 0 auto;
+    gap: 155px;
+    max-width: 1240px;
+    align-items: center;
+  }
+
+  .services_title {
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.165px;
+  }
+
+  .services_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #377DFF;
+    border: none;
+    background-color: white;
+  }
+
+  .services_btn_container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .right_services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 41px 38px;
+
+  }
+
+  .card_item {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding: 34px 53px;
+    gap: 32px;
+
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #FFF;
+    box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
+  }
+
+  @media screen and (max-width: 414px) {
     .container {
-      padding: 72px 100px;
-    }
-    header {
-      display: flex;
-      flex-direction: column;
-    }
-    .top_line {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 20px 25px;
     }
 
-    .logo {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
+    .top_line__button,
     nav {
-      display: flex;
-      gap: 50px;
+      display: none;
     }
 
-    .top_line__button {
-      padding: 12px 50px;
-      border-radius: 24px;
-      border: 1px solid #377dff;
-      background-color: white;
-      color: #377dff;
+    h1 {
+      text-align: center;
     }
-    .header__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 28px;
-    }
+
     .info-text {
       text-align: center;
-      padding: 24px 140px;
+      padding: 24px 10px;
     }
-    .info-button {
-      border-radius: 24px;
-      background: #377dff;
-      box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.5);
-      color: white;
-      padding: 12px 50px;
-      border: 1px solid #377dff;
+
+    .image1 {
+      width: 330px;
     }
 
     .image2 {
-      top: -498px;
+      width: 98px;
+      top: -228px;
       position: relative;
       z-index: 1;
-      left: -390px;
+      left: -136px;
     }
 
-    @media screen and (max-width: 414px) {
-      .container {
-        padding: 20px 25px;
-      }
-
-      .top_line__button,
-      nav {
-        display: none;
-      }
-
-      h1 {
-        text-align: center;
-      }
-      .info-text {
-        text-align: center;
-        padding: 24px 10px;
-      }
-
-      .image1 {
-        width: 330px;
-      }
-      .image2 {
-        width: 98px;
-        top: -228px;
-        position: relative;
-        z-index: 1;
-        left: -136px;
-      }
+    .main_services {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      gap: 50px;
+      max-width: 1240px;
+      align-items: center;
     }
-  </style>
-  <body>
-    <div class="container">
-      <header>
-        <div class="top_line">
-          <div class="logo">
-            <img src="./public/images/group.svg" alt="logo" />
-            <div class="logo__text">
-              <h1>WebDev</h1>
-              <p>Development</p>
-            </div>
-          </div>
-          <nav>
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Sevices</a>
-            <a href="">Projects</a>
-          </nav>
 
-          <button class="top_line__button">Contact us</button>
-        </div>
+    .right_services {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 20px;
+    }
 
-        <div class="header__content">
-          <div class="header__content info">
-            <div class="info_title">
-              <h1>Make your dream business goal come true</h1>
-            </div>
-            <div class="info-text">
-              when you need us for improve your business, then come with us to
-              help your business have reach it, you just sit and feel that goal
-            </div>
+    .services_btn_container {
+      display: flex;
+      justify-content: flex-start;
+    }
 
-            <button class="info-button">Start Project</button>
-          </div>
-          <div class="header__content images">
-            <img
-              class="image1"
-              src="./public/images/rectangle-844.jpg"
-              alt="people"
-            />
-            <img
-              class="image2"
-              src="./public/images/rectangle-831.png"
-              alt="info"
-            />
+    .lef_services {
+      text-align: center;
+    }
+  }
+</style>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="top_line">
+        <div class="logo">
+          <img src="./public/images/group.svg" alt="logo" />
+          <div class="logo__text">
+            <h1>WebDev</h1>
+            <p>Development</p>
           </div>
         </div>
-      </header>
-      <main></main>
-      <footer></footer>
-    </div>
-  </body>
+        <nav>
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Sevices</a>
+          <a href="">Projects</a>
+        </nav>
+
+        <button class="top_line__button">Contact us</button>
+      </div>
+
+      <div class="header__content">
+        <div class="header__content info">
+          <div class="info_title">
+            <h1>Make your dream business goal come true</h1>
+          </div>
+          <div class="info-text">
+            when you need us for improve your business, then come with us to
+            help your business have reach it, you just sit and feel that goal
+          </div>
+
+          <button class="info-button">Start Project</button>
+        </div>
+        <div class="header__content images">
+          <img class="image1" src="./public/images/rectangle-844.jpg" alt="people" />
+          <img class="image2" src="./public/images/rectangle-831.png" alt="info" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main_services">
+        <div class="lef_services">
+          <p style="color: #377dff;">Our Services</p>
+          <div class="services_title">
+            Perfect and Fast
+            Movement
+          </div>
+          <p>We move with make a Creative Strategy for help your business goal, we help to
+            improve your income by a
+            services we have. make your content look interesting and make people look for your business</p>
+          <div class="services_btn_container"><button class="services_btn">Read more
+              <img src="/public/images/arrow-right-1.svg"> </button>
+          </div>
+        </div>
+
+        <div class="right_services">
+          <div class="card_item">
+            <img src="/public/images/group-2117.svg">
+            <p>Social Media
+              Management</p>
+          </div>
+          <div class="card_item">
+            <img src="/public/images/group-2117.svg">
+            <p>Search Engine
+              Opimization</p>
+          </div>
+          <div class="card_item">
+            <img src="/public/images/group-2117.svg">
+            <p>Design</p>
+          </div>
+          <div class="card_item">
+            <img src="/public/images/group-2117.svg">
+            <p>Ads</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+
 </html>
